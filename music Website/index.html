@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navBar">
+        <img src="./img/Black_and_White_Simple_Music_Studio_Logo-removebg-preview.png" alt="" />
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">specification</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="#">connect</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            THE <br />
+            REAL<br />
+            SOUND
+          </h1>
+        </div>
+        <div class="right-col">
+          <p>click here to listen</p>
+          <img src="./img/play.png" id="icon"">
+        
+        </div>
+      </div>
+    </div>
+    <audio id="mysong">
+      <source src="./Hukum-Reloaded-MassTamilan.dev.mp3" />
+    </audio>
+    <script>
+      var mysong = document.getElementById("mysong");
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+
+        if(mysong.paused){
+            mysong.play();
+            icon.src="./img/pause.png" 
+        }else{
+            mysong.pause();
+                icon.src="./img/play.png"
+        }
+
+
+
+
+      }
+        
+    </script>
+  </body>
+</html>
